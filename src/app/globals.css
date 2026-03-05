@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 210 40% 92%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 210 40% 92%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 210 40% 92%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 240 8% 14%;
+    --secondary-foreground: 210 40% 80%;
+
+    --muted: 240 8% 12%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 240 8% 16%;
+    --accent-foreground: 210 40% 92%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 8% 14%;
+    --input: 240 8% 14%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Airport board aesthetic */
+.iata-code {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.flight-number {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* Seat class colors */
+.seat-economy { color: #6366F1; }
+.seat-premium_economy { color: #8B5CF6; }
+.seat-business { color: #3B82F6; }
+.seat-first { color: #EAB308; }
+
+.bg-seat-economy { background-color: #6366F1; }
+.bg-seat-premium_economy { background-color: #8B5CF6; }
+.bg-seat-business { background-color: #3B82F6; }
+.bg-seat-first { background-color: #EAB308; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(240 10% 6%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(240 8% 20%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(240 8% 28%);
+}
